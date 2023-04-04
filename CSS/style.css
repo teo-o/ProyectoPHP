@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poor Story", cursive;
+}
+
+header {
+  background-color: #fffbeb;
+  width: 100%;
+  height: auto;
+}
+
+.d-logo {
+  width: auto;
+  height: auto;
+  margin-left: 30px;
+}
+
+.d-buttons {
+  width: auto;
+  height: auto;
+  margin-right: 30px;
+}
+
+#signButton {
+  background-color: #fffbeb;
+  border: none;
+  font-weight: bold;
+  color: #f8cba6;
+}
+
+#signButton:hover {
+  color: #f8cba6;
+  background-color: #f8cba6;
+  color: #fffbeb;
+}
+
+#loginButton {
+  background-color: #f8cba6;
+  border: none;
+  font-weight: bold;
+  color: #fffbeb;
+}
+
+
+#loginButton:hover {
+  background-color: #fffbeb;
+  color: #f8cba6;
+}
+main {
+  background-color: #ecf9ff;
+  height: 83.7vh;
+}
+
+#Submit {
+  background-color: #f8cba6;
+  border: none;
+  font-weight: bold;
+  color: #fffbeb;
+}
+
+#Submit:hover {
+  background-color: #fffbeb;
+  color: #f8cba6;
+}
+footer {
+  background-color: #ffe7cc;
+}
+
+.d-footer {
+  width: 100%;
+  height: 100%;
+}
