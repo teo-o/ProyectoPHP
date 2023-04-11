@@ -44,14 +44,12 @@ header {
   color: #fffbeb;
 }
 
-
 #loginButton:hover {
   background-color: #fffbeb;
   color: #f8cba6;
 }
 main {
   background-color: #ecf9ff;
-  height: 83.7vh;
 }
 
 #Submit {
@@ -63,6 +61,13 @@ main {
 
 #Submit:hover {
   background-color: #fffbeb;
+  color: #f8cba6;
+}
+
+#SecondButton {
+  background-color: #fffbeb;
+  border: none;
+  font-weight: bold;
   color: #f8cba6;
 }
 footer {

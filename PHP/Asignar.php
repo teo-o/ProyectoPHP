@@ -7,19 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-    <title>Login</title>
+    <title>Asignar casos</title>
 </head>
 
 <body>
     <?php include 'header.php'; ?>
-    <main class="d-flex flex-column align-items-center" style="height: 83.7vh;" >
+    <main class="d-flex flex-column align-items-center" style="height: 83.7vh;">
         <div class="tittle mx-auto">
-            <h2>Iniciar sesión</h2>
+            <h2>Casos</h2>
         </div>
-        <form class="tittle mx-auto" action="menu.php" method="post">
-            <input type="text" id="usuario" name="usuario" placeholder="Identificación" required><br><br>
-            <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-            <button class="btn btn-primary btn-lg primaryButtonColors" id="Submit">Ingresar</button>
+
+        <form action=".php" method="post">
+            Analista:
+            <select>
+
+                Número de caso:
+                <input type="number" name="numcaso" id="numcaso">
+                Fecha:
+                <input type="date" name="date" id="date">
+
+                <button type="submit" class="btn btn-primary btn-lg primaryButtonColors" id="Submit">Guardar</button>
+                <button type="reset" class="btn btn-lg secondaryButtonColors" id="Secondbutton">Cancelar</button>
         </form>
     </main>
     <?php include 'footer.php'; ?>
