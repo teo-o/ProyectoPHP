@@ -11,6 +11,12 @@
 </head>
 
 <body>
+    <?php
+    require_once '../Controllers/CasoController.php';
+
+    $casosController = new CasoController();
+    $casos = $casosController->mostrarCasos();
+    ?>
     <?php include 'header.php'; ?>
     <main class="d-flex flex-column align-items-center" style="height: 83.7vh;">
 
@@ -21,8 +27,24 @@
                     <th>Id caso</th>
                     <th>Fecha</th>
                     <th>Id empleado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
+            <tbody>
+                <?php
+                foreach ($casos as $caso) {
+                    echo "<tr>";
+                    echo "<td>" . "<input type='text' value='" . $caso->getId() . "'>" . "</td>";
+                    echo "<td>" . "<input type='text' value='" . $caso->getFecha() . "'>" . "</td>";
+                    echo "<td>" . "<input type='text' value='" . $caso->getEmpleado() . "'>" . "</td>";
+                    echo "<td>";
+                    echo "<a href='' class='btn btn-primary'>Editar</a>";
+                    echo "<a href='' class='btn btn-danger'>Eliminar</a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
         </table>
     </main>
     <?php include 'footer.php'; ?>

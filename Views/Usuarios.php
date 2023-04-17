@@ -11,6 +11,13 @@
 </head>
 
 <body>
+    <?php
+    require_once '../Controllers/EmpleadoController.php';
+
+    $empleadoController = new EmpleadoController();
+    $empleados = $empleadoController->mostrarEmpleados();
+    ?>
+
     <?php include 'header.php'; ?>
     <main class="d-flex flex-column align-items-center" style="height: 83.7vh;">
         <div class="tittle mx-auto">
@@ -18,13 +25,32 @@
         </div>
 
         <table class="table table-bordered table-striped">
-            <!-- usuarios id, nombre , telefono (columnas)-->
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
+                    <th>Apellido</th>
                     <th>Telefono</th>
+                    <th>Opcion</th>
                 </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($empleados as $empleado) {
+                    echo "<tr>";
+                    echo "<td>" . "<input type='text' value='" . $empleado->getId() . "'>" . "</td>";
+                    echo "<td>" . "<input type='text' value='" . $empleado->getNombre() . "'>" . "</td>";
+                    echo "<td>" . "<input type='text' value='" . $empleado->getApellido() . "'>" . "</td>";
+                    echo "<td>" . "<input type='text' value='" . $empleado->getEmail() . "'>" . "</td>";
+                    echo "<td>";
+                    echo "<a href='' class='btn btn-primary'>Editar</a>";
+                    echo "<a href='' class='btn btn-danger'>Eliminar</a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+
         </table>
     </main>
     <?php include 'footer.php'; ?>
